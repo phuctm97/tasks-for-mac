@@ -1,0 +1,47 @@
+version: 1
+name: tasks-for-mac-demo
+title: 'Tasks for Mac: add three tasks, check two off'
+source_take: take-20261112-151419
+target:
+  kind: macos
+  bundle_id: com.example.tasks-for-mac
+  app_path: build/Tasks.app
+  window_size:
+  - 1.28e+3
+  - 7.2e+2
+environment: {}
+steps:
+- action: type_text
+  text: Record the demo video
+  target:
+    id: new-task
+  submit: true
+  caption: Type a task, hit enter
+- action: type_text
+  text: Submit to the App Store
+  target:
+    id: new-task
+  submit: true
+  caption: It is there instantly
+- action: type_text
+  text: Share it on X
+  target:
+    id: new-task
+  submit: true
+  caption: Add as many as you like
+- action: tap
+  label: Record the demo video
+  role: CheckBox
+  caption: Check one off
+- action: tap
+  label: Submit to the App Store
+  role: CheckBox
+  caption: And another
+- action: tap
+  label: Open
+  role: RadioButton
+  caption: See what is left
+- action: tap
+  label: All
+  role: RadioButton
+  caption: Back to everything
